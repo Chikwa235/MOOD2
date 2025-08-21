@@ -10,7 +10,7 @@ function MoodLog() {
     const storedLogs = JSON.parse(localStorage.getItem("moodLogs") || "[]");
     setLogs(storedLogs.reverse());
   };
-  
+
     useEffect(() => {
     fetchLogs();
 
@@ -27,3 +27,9 @@ function MoodLog() {
       clearInterval(interval);
     };
   }, []);
+
+    const deleteLog = (id) => {
+    const updated = logs.filter(log => log.id !== id);
+    setLogs(updated);
+    localStorage.setItem("moodLogs", JSON.stringify(updated.reverse()));
+  };
