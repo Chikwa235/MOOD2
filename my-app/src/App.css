@@ -204,3 +204,25 @@ button.control-btn:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #4338ca, #2563eb);
 }
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start; /* changed from center */
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  color: goldenrod;
+}
+
+
+.logo-icon {
+  color: goldenrod;
+  transition: text-shadow 0.4s ease;
+   filter: drop-shadow(0 0 5px gold);
+}
+
+.glow {
+  text-shadow: 0 0 15px gold;
+}
