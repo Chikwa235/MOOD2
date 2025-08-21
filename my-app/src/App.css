@@ -226,3 +226,14 @@ button.control-btn:hover {
 .glow {
   text-shadow: 0 0 15px gold;
 }
+
+#breathingCircle {
+  width: 120px;
+  height: 120px;
+  background-color: #4CAF50; /* green circle */
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: transform 4s ease-in-out; /* smooth scaling */
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+}
