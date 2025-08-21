@@ -53,3 +53,15 @@ function MoodLog() {
     }
   }, [logs, currentPage, totalPages]);
 
+        return (
+    <div className="section">
+      <h2>📊 Your Mood Log</h2>
+      {logs.length === 0 ? (
+        <p>No entries yet.</p>
+      ) : (
+        <>
+          {paginated.map((log) => (
+            <div className="log-entry" key={log.id} style={{ borderBottom: "1px solid #eee", marginBottom: 12, paddingBottom: 8 }}>
+              <strong>Mood:</strong> {log.mood}
+              <span style={{ float: "right", fontSize: "0.8rem" }}>{log.time}</span>
+              <div className="log-details">
