@@ -21,3 +21,54 @@ const affirmations = [
   "I grow stronger with every experience."
 ];
 
+function MoodSection() {
+  const [mood, setMood] = useState(null);
+  const [entry, setEntry] = useState("");
+  const [quote, setQuote] = useState("");
+  const [affirmation, setAffirmation] = useState("");
+  const [journalPrompt, setJournalPrompt] = useState("");
+  const [logs, setLogs] = useState([]);
+
+  useEffect(() => {
+    // Load logs on mount
+    const stored = JSON.parse(localStorage.getItem("moodLogs") || "[]");
+    setLogs(stored.reverse());
+    // Listen for updates
+    const updateLogs = () => {
+      const updated = JSON.parse(localStorage.getItem("moodLogs") || "[]");
+      setLogs(updated.reverse());
+    };
+    window.addEventListener("storage", updateLogs);
+    return () => window.removeEventListener("storage", updateLogs);
+  }, []);
+
+  const handleMoodSelect = (emoji) => {
+    setMood(emoji);
+    setQuote(quotes[emoji][0]);
+    setAffirmation(affirmations[Math.floor(Math.random() * affirmations.length)]);
+    setJournalPrompt(`Why did you feel ${emoji} today?`);
+  };
+
+  const saveJournal = () => {
+    if (!mood) return alert("Select your mood.");
+    if (!entry) return alert("Write something before saving.");
+
+    const logs = JSON.parse(localStorage.getItem("moodLogs") || "[]");
+    logs.push({
+      id: Date.now(),
+      mood,
+      text: entry,
+      time: new Date().toLocaleString(),
+    });
+
+    localStorage.setItem("moodLogs", JSON.stringify(logs));
+    window.dispatchEvent(new Event("storage"));
+
+    // Reset
+    setMood(null);
+    setEntry("");
+    setQuote("");
+    setAffirmation("");
+    setJournalPrompt("");
+    alert("Journal saved!");
+  };
