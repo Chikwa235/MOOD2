@@ -72,3 +72,31 @@ function MoodSection() {
     setJournalPrompt("");
     alert("Journal saved!");
   };
+
+    return (
+    <div className="section">
+      <h2>How are you feeling today?</h2>
+      <div className="mood-options">
+        {Object.keys(quotes).map((emoji) => (
+          <button key={emoji} onClick={() => handleMoodSelect(emoji)}>{emoji}</button>
+        ))}
+      </div>
+
+      {quote && <p>{quote}</p>}
+      {affirmation && <p><strong>{affirmation}</strong></p>}
+      {journalPrompt && <p>{journalPrompt}</p>}
+
+      <textarea
+        value={entry}
+        onChange={(e) => setEntry(e.target.value)}
+        placeholder="Write your thoughts here..."
+        id="journalArea"
+      ></textarea>
+
+      <button onClick={saveJournal} className="control-btn">Save Journal</button>
+
+    </div>
+  );
+}
+
+export default MoodSection;
