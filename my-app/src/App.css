@@ -100,3 +100,27 @@ button.control-btn:hover {
   background: var(--btn-hover);
   transform: scale(1.05);
 }
+
+#breathingCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--circle);
+  margin: 2rem auto;
+  transition: transform 4s ease-in-out;
+  position: relative;
+  top: -20px; /* Moves the circle up relative to its position */
+  z-index: 1;
+}
+
+#breathingText {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#timer {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
