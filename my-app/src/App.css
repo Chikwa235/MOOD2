@@ -83,3 +83,20 @@ h1 {
   border-radius: 10px;
   border: 1px solid #ccc;
 }
+
+button.control-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background var(--transition), transform var(--transition);
+}
+
+button.control-btn:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
