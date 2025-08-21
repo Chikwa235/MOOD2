@@ -13,3 +13,11 @@ const quotes = {
   '😰 Anxious': ["Inhale calm, exhale tension. You’ve got this."]
 };
 
+const affirmations = [
+  "I am resilient and can handle life's challenges.",
+  "Every breath I take calms me.",
+  "I choose peace over worry.",
+  "My emotions are valid, and I respect them.",
+  "I grow stronger with every experience."
+];
+
