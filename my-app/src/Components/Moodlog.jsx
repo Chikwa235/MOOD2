@@ -33,3 +33,11 @@ function MoodLog() {
     setLogs(updated);
     localStorage.setItem("moodLogs", JSON.stringify(updated.reverse()));
   };
+
+    const editLog = (id) => {
+    const entry = logs.find(log => log.id === id);
+    if (!entry) return;
+    localStorage.setItem("editLog", JSON.stringify(entry));
+    deleteLog(id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
