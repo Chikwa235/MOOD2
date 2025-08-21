@@ -65,3 +65,12 @@ function MoodLog() {
               <strong>Mood:</strong> {log.mood}
               <span style={{ float: "right", fontSize: "0.8rem" }}>{log.time}</span>
               <div className="log-details">
+
+                      <span role="img" aria-label="note">📝</span> {log.text}
+                <div style={{ marginTop: 8 }}>
+                  <button className="icon-btn" onClick={() => deleteLog(log.id)} title="Delete">🗑️ Delete</button>
+                  <button className="icon-btn" onClick={() => editLog(log.id)} title="Edit">✏️ Edit</button>
+                </div>
+              </div>
+            </div>
+          ))}
