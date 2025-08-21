@@ -124,3 +124,25 @@ button.control-btn:hover {
   margin-top: 1rem;
   font-weight: bold;
 }
+
+#log .log-entry {
+  background: var(--card);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.log-details {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--btn);
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
