@@ -1,17 +1,23 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import MoodSection from "./Components/Moodsection";
+import MoodLog from "./Components/Moodlog";
+import BreathingExercise from "./components/BreathingExercise";
+import ThemeToggle from "./components/ThemeToggle";
+import Logo from "./components/Logo";
+import "./App.css";
+import reportWebVitals from "./reportWebVitals";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={() => setCount((count) => count + 1)}>
-        Increment
-      </button>
+    <div className="App">
+      <Logo />
+      <h1>🧠 Daily Mental Health Check-In</h1>
+      <ThemeToggle />
+      <MoodSection />
+      <MoodLog />
+      <BreathingExercise />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
