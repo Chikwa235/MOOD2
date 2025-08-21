@@ -10,3 +10,20 @@ function MoodLog() {
     const storedLogs = JSON.parse(localStorage.getItem("moodLogs") || "[]");
     setLogs(storedLogs.reverse());
   };
+  
+    useEffect(() => {
+    fetchLogs();
+
+    const handleStorageChange = () => {
+      fetchLogs();
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    const interval = setInterval(fetchLogs, 500); // backup polling
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      clearInterval(interval);
+    };
+  }, []);
