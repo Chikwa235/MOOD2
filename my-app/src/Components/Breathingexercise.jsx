@@ -46,4 +46,24 @@ function BreathingExercise() {
     setText("Timer: 0s");
     setScale(1);
   };
+
+   return (
+    <div className="section">
+      <h2>🧘 Breathing Exercise</h2>
+      <div id="breathingBox">
+        <div
+          id="breathingCircle"
+          style={{ transform: `scale(${scale})`, transition: "transform 1s ease-in-out" }}
+        ></div>
+        <div id="breathingText">{text}</div>
+        <div id="timer">
+          Timer: {Math.floor(seconds / 60)} min {seconds % 60}s
+        </div>
+        <button onClick={start} className="control-btn">Start</button>
+        <button onClick={stop} className="control-btn">Stop</button>
+      </div>
+    </div>
+  );
 }
+
+export default BreathingExercise;
