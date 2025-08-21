@@ -49,3 +49,37 @@ h1 {
   border-left: 4px solid var(--circle);
   border-right: 4px solid var(--circle);
 }
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mood-options button {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--circle);
+  color: white;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.mood-options button:hover {
+  transform: scale(1.1);
+  background: var(--btn-hover);
+}
+
+#journalArea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
