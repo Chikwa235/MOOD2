@@ -39,3 +39,13 @@ h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
+.section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--circle);
+  border-right: 4px solid var(--circle);
+}
