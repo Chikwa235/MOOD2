@@ -1,13 +1,21 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg: #f3f4f6;
+  --text: #1f2937;
+  --card: #ffffff;
+  --circle: #3b82f6;
+  --btn: #2563eb;
+  --btn-hover: #1d4ed8;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --font: 'Segoe UI', sans-serif;
+  --transition: 0.3s ease;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  min-height: 100vh;
+body.dark-mode {
+  --bg: #121212;
+  --text: #e5e7eb;
+  --card: #1e1e1e;
+  --circle: #6366f1;
+  --btn: #4f46e5;
+  --btn-hover: #4338ca;
 }
