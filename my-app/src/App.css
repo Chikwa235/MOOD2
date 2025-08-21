@@ -146,3 +146,38 @@ button.control-btn:hover {
   cursor: pointer;
   margin-right: 10px;
 }
+
+#pageInfo {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+
+
+#prevPage,
+#nextPage {
+  padding: 0.6rem 1.5rem;
+  background-color: #007bff; /* Clear blue */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer !important; /* Always pointer */
+  transition: background 0.3s ease;
+}
+
+#prevPage:disabled,
+#nextPage:disabled {
+  opacity: 0.5;
+  cursor: pointer !important; /* Still pointer when disabled */
+}
+
+#prevPage:hover,
+#nextPage:hover {
+  background-color: #21b300; /* Darker blue on hover */
+}
+
+#prevPage:hover:enabled,
+#nextPage:hover:enabled {
+  cursor: pointer;
+}
