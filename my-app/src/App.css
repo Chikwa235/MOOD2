@@ -237,3 +237,19 @@ button.control-btn:hover {
   transition: transform 4s ease-in-out; /* smooth scaling */
   box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
 }
+
+.control-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196F3;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #1976D2;
+}
