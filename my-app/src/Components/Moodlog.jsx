@@ -74,3 +74,31 @@ function MoodLog() {
               </div>
             </div>
           ))}
+
+           <div id="pagination" style={{ marginTop: '1rem', textAlign: 'center' }}>
+            <button
+               id="prevPage"
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            <span id="pageInfo" style={{ margin: "0 1rem" }}>
+              Page {currentPage} of {totalPages || 1}
+            </span>
+            <button
+              id="nextPage"
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={currentPage === totalPages || totalPages === 0}
+            >
+              Next
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default MoodLog;
+
