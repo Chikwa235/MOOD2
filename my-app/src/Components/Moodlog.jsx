@@ -41,3 +41,15 @@ function MoodLog() {
     deleteLog(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+    const totalPages = Math.ceil(logs.length / logsPerPage);
+  const start = (currentPage - 1) * logsPerPage;
+  const paginated = logs.slice(start, start + logsPerPage);
+
+  // Adjust current page if out of bounds (e.g. after delete)
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(totalPages);
+    }
+  }, [logs, currentPage, totalPages]);
+
