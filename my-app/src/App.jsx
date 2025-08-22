@@ -5,7 +5,7 @@ import BreathingExercise from "./components/BreathingExercise";
 import ThemeToggle from "./components/ThemeToggle";
 import Logo from "./components/Logo";
 import "./App.css";
-import reportWebVitals from "./reportWebVitals";
+
 
 function App() {
   return (
