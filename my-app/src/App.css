@@ -253,3 +253,72 @@ button.control-btn:hover {
 .control-btn:hover {
   background-color: #1976D2;
 }
+
+/*#app-footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+#app-footer:hover {
+  color: #00c8ff;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+}
+
+
+body, html {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#app-footer {
+  margin-top: auto;
+}*/
+
+/* FOOTER — theme-aware */
+body.dark-mode #app-footer {
+  background-color: #111;    /* dark bg */
+  color: #e0e0e0;            /* light text for dark bg */
+  border-top: 1px solid #333;
+}
+
+body:not(.dark-mode) #app-footer {
+  background-color: #f9f9f9; /* light bg */
+  color: #222;               /* dark text for light bg */
+  border-top: 1px solid #ddd;
+}
+
+/* shared footer styles */
+#app-footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.25s ease, color 0.25s ease, text-shadow 0.25s ease;
+  margin-top: auto; /* keeps footer at bottom with root flex layout */
+}
+
+#app-footer:hover {
+  text-shadow: 0 0 8px rgba(0, 150, 255, 0.25);
+}
+
+/* keep footer pinned to bottom when content is short */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
